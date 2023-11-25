@@ -26,7 +26,7 @@ const MyTable = () => {
 
   // Рендер компонента с использованием данных из состояния
   return (
-    <div>
+    <div className='table-container'>
       
       <table>
         <thead>
@@ -39,7 +39,7 @@ const MyTable = () => {
           {data.map((item) => (
             <tr key={item.id}>
               <td>{item.id}</td>
-              <Button view=''>{item.name}</Button>
+              <Button view='' as='a' href='index2'>{item.name}</Button>
             </tr>
           ))}
         </tbody>

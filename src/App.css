@@ -40,7 +40,7 @@
 
 
 .table-container {
-  max-height: 50px;
+  max-height: 500px;
   /* Вы можете установить желаемую максимальную высоту */
   overflow-y: auto;
 }
@@ -48,6 +48,8 @@
 table {
   width: 100%;
   border-collapse: collapse;
+  background-color: #ffffff;
+  border-radius: 10px;
 }
 
 th,
