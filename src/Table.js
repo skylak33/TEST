@@ -1,9 +1,12 @@
 import { Button } from '@salutejs/plasma-ui';
 import React, { useState, useEffect } from 'react';
+import { useNavigate} from 'react-router-dom';
+import { Checkbox } from '@salutejs/plasma-ui';
 import './App.css';
 
+
 const MyTable = () => {
-  const [data, setData] = useState([]); // Инициализируем пустым массивом
+  const [data, setData] = useState([]);
 
   useEffect(() => {
     // Функция, которая получает данные с сервера
@@ -24,6 +27,9 @@ const MyTable = () => {
     fetchDataFromAPI();
   }, []); // Пустой массив зависимостей, чтобы вызвать useEffect только один раз
 
+  //const navigateToSecondPage = () => {
+   // navigate('/second');
+  //};
   // Рендер компонента с использованием данных из состояния
   return (
     <div className='table-container'>
@@ -39,8 +45,12 @@ const MyTable = () => {
           {data.map((item) => (
             <tr key={item.id}>
               <td>{item.id}</td>
-              <Button view='' as='a' href='index2'>{item.name}</Button>
+
+              <Button view='' >{item.name}</Button>
+    
+              <Checkbox readOnly='true' />
             </tr>
+            
           ))}
         </tbody>
       </table>

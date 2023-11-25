@@ -26,7 +26,7 @@ const ChatApp = () => {
     };
 
     return (
-        <div>
+        <div className='chat'>
             <div style={{ height: '300px', border: '1px solid #ccc', overflow: 'auto' }}>
                 {messages.map((message, index) => (
                     <div
