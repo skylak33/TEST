@@ -6,6 +6,7 @@ import './App.css';
 
 
 const MyTable = () => {
+  
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -27,10 +28,22 @@ const MyTable = () => {
     fetchDataFromAPI();
   }, []); // Пустой массив зависимостей, чтобы вызвать useEffect только один раз
 
+  const callId = (item) => {
+    console.warn(item);
+    setTimeout(SecondPageComponentLink, 1000)
+    // Здесь вы можете использовать item.id или другие свойства объекта item
+  };
+  const SecondPageComponentLink = () => {
+    window.location.href = "second";
+        console.warn("1")
+  }
   //const navigateToSecondPage = () => {
    // navigate('/second');
   //};
   // Рендер компонента с использованием данных из состояния
+
+  
+
   return (
     <div className='table-container'>
       
@@ -43,10 +56,11 @@ const MyTable = () => {
         </thead>
         <tbody>
           {data.map((item) => (
+           
             <tr key={item.id}>
               <td>{item.id}</td>
-
-              <Button view='' >{item.name}</Button>
+              
+              <Button view='' onClick={() => callId(item)} >{item.name}</Button>
     
               <Checkbox readOnly='true' />
             </tr>
