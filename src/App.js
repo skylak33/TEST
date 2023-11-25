@@ -12,21 +12,10 @@ import UsrForm from './UserForm';
 
 
 const App = () => {
-    function test() {
-        console.log("123")
-    }
+
   return (
-    <div>
-        <div className="secondPage-container">
-        <UsrForm />
-        <ChatApp />
-        </div>
-        <div className="secondPage-container">
-        <Button view='succes' onClick={test}>Принять </Button>
-        <Button view='error' onClick={test}>Отклонить </Button>
-        </div>
-    </div>
     
+    <FirstPageComponent/>
   );
 };
 

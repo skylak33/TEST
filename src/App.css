@@ -79,3 +79,21 @@ td {
   justify-content: space-between;
   padding: 20px;
 }
+
+/* Добавьте этот CSS в ваш файл стилей (например, App.css) */
+.chat {
+  max-width: 400px;
+  /* Максимальная ширина чата */
+}
+
+.messages-container {
+  max-height: 300px;
+  /* Максимальная высота контейнера сообщений */
+  overflow-y: auto;
+  /* Включить вертикальное прокручивание при необходимости */
+}
+
+.message {
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+}

@@ -35,6 +35,7 @@ const ChatApp = () => {
                             padding: '8px',
                             borderBottom: '1px solid #eee',
                             textAlign: message.sender === 'user' ? 'right' : 'left',
+                            whiteSpace: 'pre-wrap', // Добавляем это свойство
                         }}
                     >
                         <strong>{message.sender === 'user' ? 'Вы:' : 'Бот:'}</strong> {message.text}
